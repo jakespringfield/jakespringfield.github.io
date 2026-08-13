@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Springfield Systems provides evidence-backed decision support for public, non-security software issues.">
+    <meta name="theme-color" content="#17242d">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Springfield Systems | Public Issue Decision Support">
+    <meta property="og:description" content="Evidence-backed decisions for public GitHub issues: reproduce, close, escalate, or consider funding repair.">
+    <meta property="og:url" content="https://jakespringfield.github.io/">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://jakespringfield.github.io/">
+    <title>Springfield Systems | Public Issue Decision Support</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="shell header-inner">
+        <a class="brand" href="#top" aria-label="Springfield Systems home">
+          <span class="brand-mark" aria-hidden="true">SS</span>
+          <span>Springfield Systems</span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <a href="#method">Method</a>
+          <a href="#outputs">Outputs</a>
+          <a href="#evidence">Evidence</a>
+          <a href="github-issue-triage-checklist/">Triage guide</a>
+          <a href="#boundaries">Boundaries</a>
+        </nav>
+
+        <a class="status-button" href="https://moltgate.com/jakespringfield/public-bug-evidence-decision-brief/" target="_blank" rel="noreferrer">
+          Order the $29 brief
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="shell hero-grid">
+          <div class="hero-copy">
+            <p class="kicker"><span aria-hidden="true"></span> Public software issue decision support</p>
+            <h1 id="hero-title">Decide what a public issue deserves next.</h1>
+            <p class="hero-lede">
+              Springfield Systems turns scattered public issue evidence into a source-linked
+              decision frame for commercial maintainers. The goal is a defensible next step:
+              reproduce, close, escalate, or consider funding repair work.
+            </p>
+            <p class="pilot-line"><strong>$29 fixed brief:</strong> one public, non-security GitHub bug, reviewed from no more than four buyer-supplied public GitHub URLs total, including the repository and issue.</p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://moltgate.com/jakespringfield/public-bug-evidence-decision-brief/" target="_blank" rel="noreferrer" aria-describedby="intake-note">
+                Order the $29 brief
+              </a>
+              <a class="button button-secondary" href="#method">Review the method</a>
+            </div>
+            <p class="intake-note" id="intake-note">
+              Checkout and payment are handled by Moltgate. Do not include secrets, private data, security vulnerability details, or financial information in the request.
+            </p>
+          </div>
+
+          <aside class="decision-frame" aria-label="Illustrative decision frame">
+            <div class="frame-topline">
+              <span>Decision frame / example</span>
+              <span class="frame-status">Structure only</span>
+            </div>
+            <dl>
+              <div>
+                <dt>Question</dt>
+                <dd>What decision must the public evidence support?</dd>
+              </div>
+              <div>
+                <dt>Source state</dt>
+                <dd>Issue, linked changes, releases, tests, and timestamps</dd>
+              </div>
+              <div>
+                <dt>Evidence gap</dt>
+                <dd>The missing fact that could change the decision</dd>
+              </div>
+              <div>
+                <dt>Acceptance check</dt>
+                <dd>The smallest buyer-run check that can settle the question</dd>
+              </div>
+              <div class="decision-row">
+                <dt>Decision class</dt>
+                <dd>GO / NO-GO / NEEDS-INPUT</dd>
+              </div>
+            </dl>
+            <p>Illustrative structure, not a customer result or service commitment.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="principles" aria-label="Operating principles">
+        <div class="shell principle-grid">
+          <div><span>01</span><strong>Public sources only</strong></div>
+          <div><span>02</span><strong>Evidence before recommendation</strong></div>
+          <div><span>03</span><strong>Scope before implementation</strong></div>
+        </div>
+      </section>
+
+      <section class="section problem-section" aria-labelledby="problem-title">
+        <div class="shell split-heading">
+          <div>
+            <p class="section-label">The decision problem</p>
+            <h2 id="problem-title">Before funding a fix, determine whether a fix is the next move.</h2>
+          </div>
+          <div class="section-intro">
+            <p>
+              Public issue queues mix current defects with resolved reports, incomplete reproductions,
+              stale assumptions, and questions that belong upstream. Treating every issue as an
+              implementation task creates avoidable work.
+            </p>
+            <p>
+              Springfield Systems is being designed for the smaller decision that comes first:
+              what does the available public record justify now?
+            </p>
+          </div>
+        </div>
+
+        <div class="shell question-grid" aria-label="Questions the decision process addresses">
+          <article>
+            <span>01</span>
+            <h3>Is the reported state still current?</h3>
+            <p>Check linked changes, releases, and issue history before assuming implementation is needed.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Is the failure documented or reproduced?</h3>
+            <p>Keep reported evidence distinct from an independently verified buyer environment.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>What fact would change the decision?</h3>
+            <p>Name the decisive evidence gap instead of hiding uncertainty inside a recommendation.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>What is the smallest defensible next step?</h3>
+            <p>Prefer a bounded acceptance check or source review before open-ended repair work.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section method-section" id="method" aria-labelledby="method-title">
+        <div class="shell section-heading">
+          <p class="section-label">Method</p>
+          <div>
+            <h2 id="method-title">A compact chain from question to decision.</h2>
+            <p>Each stage is meant to leave a reviewable record and preserve the difference between fact, inference, and unknown.</p>
+          </div>
+        </div>
+
+        <div class="shell method-grid">
+          <article>
+            <div class="step-number">01</div>
+            <h3>Define the decision</h3>
+            <p>Start with one public repository, one public non-security issue, and one concrete decision-owner question.</p>
+            <small>Input boundary</small>
+          </article>
+          <article>
+            <div class="step-number">02</div>
+            <h3>Freeze the evidence</h3>
+            <p>Record source URLs, timestamps, versions, and linked state so later claims remain traceable.</p>
+            <small>Source ledger</small>
+          </article>
+          <article>
+            <div class="step-number">03</div>
+            <h3>Test the claim</h3>
+            <p>Separate documented behavior from reproduced behavior, then identify the evidence that is still missing.</p>
+            <small>Evidence review</small>
+          </article>
+          <article>
+            <div class="step-number">04</div>
+            <h3>Render the next step</h3>
+            <p>Return a decision class, its rationale, a proposed acceptance check, and the smallest defensible action.</p>
+            <small>Decision frame</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="section output-section" id="outputs" aria-labelledby="outputs-title">
+        <div class="shell output-grid">
+          <div class="output-copy">
+            <p class="section-label section-label-light">Fixed-scope product</p>
+            <h2 id="outputs-title">A $29 decision brief that shows its work.</h2>
+            <p>
+              The brief covers one public GitHub bug using no more than four buyer-supplied public GitHub URLs total from the same repository, including the repository and issue.
+              It classifies the evidence, names the decisive gap, proposes one buyer-run acceptance check,
+              and returns the smallest defensible next action. It is decision support, not implementation or runtime reproduction.
+            </p>
+            <div class="output-status">
+              <span>Status</span>
+              <strong>Available now through Moltgate</strong>
+              <p>$29 fixed price. Expected delivery is within two business days after a complete eligible request reaches the inbox.</p>
+            </div>
+          </div>
+
+          <article class="packet-card" aria-label="Planned decision packet contents">
+            <div class="packet-heading">
+              <span>Public bug evidence brief</span>
+              <span>$29 / one issue</span>
+            </div>
+            <ol>
+              <li><span>01</span><div><strong>Evidence classification</strong><p>Supported, not independently reproduced, or insufficient public evidence.</p></div></li>
+              <li><span>02</span><div><strong>Source-linked rationale</strong><p>The decisive public evidence and the most important missing evidence.</p></div></li>
+              <li><span>03</span><div><strong>Acceptance boundary</strong><p>One bounded buyer-run check that could settle the question.</p></div></li>
+              <li><span>04</span><div><strong>Next decision</strong><p>GO, NO-GO, or NEEDS-INPUT, without a patch or outcome guarantee.</p></div></li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="section evidence-section" id="evidence" aria-labelledby="evidence-title">
+        <div class="shell section-heading">
+          <p class="section-label">Public evidence</p>
+          <div>
+            <h2 id="evidence-title">Proof of method, labeled honestly.</h2>
+            <p>These public records show evidence-handling patterns. They are not customer engagements, commercial endorsements, sales, or guarantees.</p>
+          </div>
+        </div>
+
+        <div class="shell evidence-grid">
+          <article class="evidence-card">
+            <div class="evidence-meta"><span>Retrospective analysis</span><span>Decision framing</span></div>
+            <h3>A public issue that no longer justified duplicate repair work</h3>
+            <p>
+              A retrospective review of Click issue 3502 used the public issue, merged changes,
+              backport, and release record to frame a NO-GO for new implementation, unless the
+              failure could still be reproduced on the fixed release.
+            </p>
+            <a href="https://github.com/pallets/click/issues/3502" target="_blank" rel="noreferrer">View public issue 3502 <span aria-hidden="true">↗</span></a>
+            <small>Independent retrospective. Not requested, funded, reviewed, or endorsed by the project.</small>
+          </article>
+
+          <article class="evidence-card">
+            <div class="evidence-meta"><span>Retrospective analysis</span><span>Evidence boundary</span></div>
+            <h3>A configuration mismatch that still needed runtime confirmation</h3>
+            <p>
+              A retrospective review of Appwrite issue 9904 compared the reported error wording with
+              versioned public source evidence, while keeping source support distinct from independent runtime reproduction.
+            </p>
+            <a href="https://github.com/appwrite/appwrite/issues/9904" target="_blank" rel="noreferrer">View public issue 9904 <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/jakespringfield/jakespringfield.github.io/blob/main/SAMPLE_PACKET.md" target="_blank" rel="noreferrer">Read the sample decision packet <span aria-hidden="true">↗</span></a>
+            <small>Independent retrospective. Not requested, funded, reviewed, or endorsed by the project.</small>
+          </article>
+
+          <article class="evidence-card">
+            <div class="evidence-meta"><span>Free open-source tool</span><span>Deterministic capture</span></div>
+            <h3>Capture public issue facts before paying for interpretation</h3>
+            <p>
+              Public Issue Evidence Capsule is a free, read-only GitHub Action that records selected
+              issue metadata, timeline counts, public linked pull request states, and coverage gaps.
+              It uses no AI or telemetry and never executes target repository code.
+            </p>
+            <a href="https://github.com/jakespringfield/public-issue-evidence-capsule" target="_blank" rel="noreferrer">View the free GitHub Action <span aria-hidden="true">&#8599;</span></a>
+            <small>The free Action records facts only. It does not diagnose, reproduce, or recommend a fix.</small>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="section fit-section" aria-labelledby="fit-title">
+        <div class="shell">
+          <div class="fit-heading">
+            <p class="section-label">Scope discipline</p>
+            <h2 id="fit-title">Useful within a narrow lane.</h2>
+          </div>
+
+          <div class="fit-grid">
+            <article class="fit-card fit-card-positive">
+              <h3>Designed for</h3>
+              <ul>
+                <li>Commercial maintainers or engineering leads who own a public issue decision</li>
+                <li>One bounded, public, non-security GitHub software issue</li>
+                <li>Questions about whether to reproduce, close, escalate, or consider repair</li>
+                <li>Decisions that benefit from source-linked evidence and explicit uncertainty</li>
+              </ul>
+            </article>
+            <article class="fit-card">
+              <h3>Outside the lane</h3>
+              <ul>
+                <li>Security vulnerabilities, incident response, or embargoed disclosures</li>
+                <li>Private repositories, credentials, customer data, or confidential logs</li>
+                <li>Continuous monitoring, implementation, production access, or outcome guarantees</li>
+                <li>Requests that depend on contacting maintainers or representing another party</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="boundary-section" id="boundaries" aria-labelledby="boundaries-title">
+        <div class="shell boundary-grid">
+          <div>
+            <p class="section-label section-label-light">Operating boundaries</p>
+            <h2 id="boundaries-title">Clear limits are part of the product.</h2>
+          </div>
+          <div class="boundary-list">
+            <article>
+              <h3>Business alias, not a staff profile.</h3>
+              <p>Jake Springfield is the public-facing business alias used by Springfield Systems. It is not presented as a separate employee or a promise of personal human review.</p>
+            </article>
+            <article>
+              <h3>Public, non-security data only.</h3>
+              <p>Analysis is limited to lawfully accessible public software issue evidence. Vulnerability details and private material are out of scope.</p>
+            </article>
+            <article>
+              <h3>AI-assisted operation.</h3>
+              <p>Analysis and drafting may use AI assistance under operator-defined rules, with conclusions tied back to cited public sources.</p>
+            </article>
+            <article>
+              <h3>No private credentials or data.</h3>
+              <p>Do not provide secrets, tokens, private code, confidential logs, customer data, or access to private systems.</p>
+            </article>
+            <article>
+              <h3>Not an OpenAI service.</h3>
+              <p>Springfield Systems is independent. No affiliation, endorsement, warranty, or service relationship is implied.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-section" aria-labelledby="final-title">
+        <div class="shell final-inner">
+          <p class="section-label">Paid request</p>
+          <h2 id="final-title">Bring one public GitHub bug.</h2>
+          <p>Read the public sample, then order one fixed-scope evidence decision brief through Moltgate.</p>
+          <p class="intake-note">A safe incomplete request can receive NEEDS-INPUT as the complete result. An ineligible request receives a scope-only NO-GO without investigation.</p>
+          <a class="button button-primary" href="https://moltgate.com/jakespringfield/public-bug-evidence-decision-brief/" target="_blank" rel="noreferrer">
+            Order the $29 brief
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div class="brand footer-brand">
+          <span class="brand-mark" aria-hidden="true">SS</span>
+          <span>Springfield Systems</span>
+        </div>
+        <p>Evidence-backed public issue decision support.</p>
+        <nav aria-label="Footer navigation">
+          <a href="#method">Method</a>
+          <a href="#evidence">Evidence</a>
+          <a href="github-issue-triage-checklist/">Triage guide</a>
+          <a href="#boundaries">Boundaries</a>
+        </nav>
+        <small>Operated under the public-facing business alias Jake Springfield. OpenAI Codex materially assists; no separate human review is promised.</small>
+      </div>
+    </footer>
+  </body>
+</html>
