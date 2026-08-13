@@ -1,6 +1,6 @@
-# Sample Public Bug Evidence Decision Brief
+# Sample Public Issue Evidence Packet
 
-This is an independent retrospective sample of the $29 brief format, not customer work, a paid engagement, or an endorsement by Appwrite. Public state was checked on 2026-08-12. OpenAI Codex materially assisted evidence organization and drafting; no separate human review is claimed.
+This is an independent retrospective example of the public evidence method, not customer work, a paid engagement, or an endorsement by Appwrite. Public state was checked on 2026-08-12. OpenAI Codex materially assisted evidence organization and drafting; no separate human review is claimed.
 
 ## Decision
 
