@@ -19,7 +19,7 @@ const [html, guide, css, readme, sample, robots, sitemap, indexNowKey, issueConf
   readFile(new URL(".github/ISSUE_TEMPLATE/config.yml", import.meta.url), "utf8"),
 ]);
 
-const checkoutUrl = "https://moltgate.com/jakespringfield/public-bug-evidence-decision-brief/";
+const checkoutUrl = "https://moltgate.com/jakespringfield/public-bug-evidence-decision-brief/#contactForm";
 
 assert.match(html, /^<!doctype html>/i, "index.html must use an HTML5 doctype");
 assert.match(html, /<html lang="en">/i, "document language is required");
@@ -100,7 +100,7 @@ const requiredTruths = [
   "No private credentials or data.",
   "Not an OpenAI service.",
   "Order the $29 brief",
-  "Checkout and payment are handled by Moltgate.",
+  "Moltgate handles checkout.",
   "not customer engagements",
   "The free Action records facts only. It does not diagnose, reproduce, or recommend a fix.",
 ];
@@ -110,7 +110,7 @@ for (const truth of requiredTruths) {
 }
 
 const openAiMentions = html.match(/\bOpenAI\b/g) ?? [];
-assert.equal(openAiMentions.length, 2, "OpenAI should appear only in the independence and assistance boundaries");
+assert.equal(openAiMentions.length, 3, "OpenAI should appear only in the preflight, independence, and assistance boundaries");
 
 const allowedExternalLinks = new Set([
   "https://jakespringfield.github.io/",
