@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A public-evidence checklist for commercial maintainers deciding the next move on one GitHub bug: reproduce, close, escalate, or fund a repair.">
+    <meta name="theme-color" content="#17242d">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="GitHub Issue Triage: Reproduce, Close, Escalate, or Fund a Bug">
+    <meta property="og:description" content="Decide whether a public bug deserves reproduction, closure, escalation, or funded repair.">
+    <meta property="og:url" content="https://jakespringfield.github.io/github-issue-triage-checklist/">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://jakespringfield.github.io/github-issue-triage-checklist/">
+    <title>GitHub Issue Triage: Reproduce, Close, Escalate, or Fund a Bug</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "GitHub Issue Triage: Reproduce, Close, Escalate, or Fund a Bug",
+        "description": "A public-evidence workflow for deciding what an ambiguous GitHub bug deserves next.",
+        "datePublished": "2026-08-12",
+        "dateModified": "2026-08-12",
+        "mainEntityOfPage": "https://jakespringfield.github.io/github-issue-triage-checklist/",
+        "author": {
+          "@type": "Person",
+          "name": "Jake Springfield",
+          "description": "Public-facing business alias operating Springfield Systems"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="shell header-inner">
+        <a class="brand" href="../index.html" aria-label="Springfield Systems home">
+          <span class="brand-mark" aria-hidden="true">SS</span>
+          <span>Springfield Systems</span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <a href="#checklist">Checklist</a>
+          <a href="#evidence-ladder">Evidence ladder</a>
+          <a href="#acceptance">Acceptance check</a>
+          <a href="../index.html">Service</a>
+        </nav>
+
+        <a class="status-button" href="https://moltgate.com/jakespringfield/public-bug-evidence-decision-brief/" target="_blank" rel="noreferrer">
+          Order the $29 brief
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="guide-hero" aria-labelledby="guide-title">
+        <div class="shell guide-hero-inner">
+          <p class="kicker"><span aria-hidden="true"></span> Public GitHub issue workflow</p>
+          <h1 id="guide-title">GitHub issue triage for the decision before the fix</h1>
+          <p class="guide-deck">Decide whether to reproduce, close, escalate, or fund a fix without turning an ambiguous public issue into an open-ended investigation.</p>
+          <div class="guide-meta" aria-label="Article details">
+            <span>8 decision steps</span>
+            <span>Public evidence only</span>
+            <span>Updated August 12, 2026</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="shell guide-layout">
+        <aside class="guide-toc" aria-label="On this page">
+          <p class="section-label">On this page</p>
+          <ol>
+            <li><a href="#checklist">The checklist</a></li>
+            <li><a href="#evidence-ladder">Evidence ladder</a></li>
+            <li><a href="#acceptance">Acceptance check</a></li>
+            <li><a href="#decision">Decision classes</a></li>
+            <li><a href="#mistakes">Common mistakes</a></li>
+          </ol>
+        </aside>
+
+        <article class="guide-article">
+          <section class="guide-intro">
+            <p class="guide-lead">A useful triage result is not a long summary. It is a defensible decision tied to current sources, an explicit evidence gap, and one bounded check that could change the decision.</p>
+            <p>This workflow is designed for maintainers, engineering leads, and support owners reviewing public, non-security software bugs. It deliberately separates what a reporter says, what the public record supports, and what someone has independently reproduced.</p>
+          </section>
+
+          <section class="guide-section" id="checklist" aria-labelledby="checklist-title">
+            <p class="section-label">The checklist</p>
+            <h2 id="checklist-title">Eight steps before anyone starts fixing.</h2>
+
+            <ol class="checklist-steps">
+              <li>
+                <span>01</span>
+                <div><h3>Freeze the decision question.</h3><p>Write the choice in operational terms: reproduce, close, escalate, or consider funding repair. If the decision is vague, the research will expand without a stopping point.</p></div>
+              </li>
+              <li>
+                <span>02</span>
+                <div><h3>Record the exact public input.</h3><p>Capture the repository, issue, version or environment reported, dates, and the small set of linked sources that could materially affect the decision.</p></div>
+              </li>
+              <li>
+                <span>03</span>
+                <div><h3>Separate claims from verified facts.</h3><p>Label reporter statements as reported. Reserve verified for facts directly supported by current public source, release, test, or maintainer records.</p></div>
+              </li>
+              <li>
+                <span>04</span>
+                <div><h3>Map linked implementation state.</h3><p>Check whether referenced pull requests are open, merged, closed, superseded, or unrelated. An issue remaining open does not prove that no repair exists.</p></div>
+              </li>
+              <li>
+                <span>05</span>
+                <div><h3>Check release and version state.</h3><p>A merged change is not automatically present in the buyer's version. Identify the release, backport, or deployed build that would contain it.</p></div>
+              </li>
+              <li>
+                <span>06</span>
+                <div><h3>Name the decisive evidence gap.</h3><p>State the one missing fact most likely to reverse the decision. Avoid a generic list of everything that might be nice to know.</p></div>
+              </li>
+              <li>
+                <span>07</span>
+                <div><h3>Write one bounded acceptance check.</h3><p>Define a buyer-run check with a pinned environment, exact action, observable result, and pass or fail boundary. Do not hide an open-ended reproduction project inside the word test.</p></div>
+              </li>
+              <li>
+                <span>08</span>
+                <div><h3>Issue a decision with limits.</h3><p>Return GO, NO-GO, or NEEDS-INPUT, explain why, and say what the decision does not prove. A useful NO-GO can prevent duplicate or premature repair work.</p></div>
+              </li>
+            </ol>
+          </section>
+
+          <section class="guide-section" id="evidence-ladder" aria-labelledby="ladder-title">
+            <p class="section-label">Evidence ladder</p>
+            <h2 id="ladder-title">Use the narrowest truthful evidence label.</h2>
+            <div class="evidence-ladder" role="list">
+              <article role="listitem"><span>01</span><h3>Reporter-reported</h3><p>The issue or comment states the behavior. No independent confirmation is implied.</p></article>
+              <article role="listitem"><span>02</span><h3>Supported by public evidence</h3><p>Current source, release, test, or maintainer records support the claim, but the target environment has not been independently exercised.</p></article>
+              <article role="listitem"><span>03</span><h3>Independently reproduced</h3><p>The behavior was observed in a defined environment using a recorded procedure. This is a stronger claim and requires runtime evidence.</p></article>
+              <article role="listitem"><span>04</span><h3>Insufficient public evidence</h3><p>The record cannot support a decision without a missing version, source, reproduction, or authority fact.</p></article>
+            </div>
+          </section>
+
+          <section class="guide-section" id="acceptance" aria-labelledby="acceptance-title">
+            <p class="section-label">Acceptance check</p>
+            <h2 id="acceptance-title">Make the next check smaller than the bug.</h2>
+            <div class="acceptance-template">
+              <p><strong>Given</strong> a pinned version, environment, and starting state</p>
+              <p><strong>When</strong> one exact action is performed</p>
+              <p><strong>Then</strong> one observable result must occur</p>
+              <p><strong>Pass</strong> when the stated result is observed</p>
+              <p><strong>Fail</strong> when the contrary result is observed</p>
+              <p><strong>Limit</strong> what this check still does not establish</p>
+            </div>
+            <p class="guide-note">The acceptance check is a proposal for the buyer to run. Springfield Systems does not execute target code or claim runtime reproduction as part of the $29 brief.</p>
+          </section>
+
+          <section class="guide-section" id="decision" aria-labelledby="decision-title">
+            <p class="section-label">Decision classes</p>
+            <h2 id="decision-title">End with an action, not a summary.</h2>
+            <div class="decision-cards">
+              <article><h3>GO</h3><p>The public record supports taking the named next step, subject to the stated limits.</p></article>
+              <article><h3>NO-GO</h3><p>Current evidence does not justify the proposed work, duplicate effort, or escalation.</p></article>
+              <article><h3>NEEDS-INPUT</h3><p>One decisive missing fact prevents a responsible GO or NO-GO.</p></article>
+            </div>
+          </section>
+
+          <section class="guide-section" id="mistakes" aria-labelledby="mistakes-title">
+            <p class="section-label">Common mistakes</p>
+            <h2 id="mistakes-title">Five shortcuts that create bad triage.</h2>
+            <ul class="mistake-list">
+              <li>Treating an open issue as proof that the defect remains unfixed.</li>
+              <li>Treating a merged pull request as proof that every affected release contains the change.</li>
+              <li>Calling a reporter's result independently reproduced.</li>
+              <li>Using a long source list instead of identifying the decisive source.</li>
+              <li>Recommending implementation before defining the buyer's acceptance boundary.</li>
+            </ul>
+          </section>
+
+          <section class="guide-cta" aria-labelledby="guide-cta-title">
+            <p class="section-label">One issue, one next decision</p>
+            <h2 id="guide-cta-title">Need this decision documented for a live public bug?</h2>
+            <p>The $29 Public Bug Evidence Decision Brief applies this workflow to one public, non-security GitHub issue, reviewed from no more than four buyer-supplied same-repository public GitHub URLs total, including the repository and issue. Delivery is targeted within two business days.</p>
+            <a class="button button-primary" href="https://moltgate.com/jakespringfield/public-bug-evidence-decision-brief/" target="_blank" rel="noreferrer">Get a $29 source-linked decision brief</a>
+            <p class="guide-source-tag">To identify this guide as the source without tracking software, begin the request with <strong>TRIAGE-CHECKLIST</strong>.</p>
+            <p class="guide-disclosure">Springfield Systems is operated under the public-facing business alias Jake Springfield. OpenAI Codex materially assists evidence organization and drafting; no separate human review is promised. This is not an OpenAI service and is independent of every repository reviewed.</p>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div class="brand footer-brand">
+          <span class="brand-mark" aria-hidden="true">SS</span>
+          <span>Springfield Systems</span>
+        </div>
+        <p>Evidence-backed public issue decision support.</p>
+        <nav aria-label="Footer navigation">
+          <a href="../index.html">Service</a>
+          <a href="#checklist">Checklist</a>
+          <a href="#evidence-ladder">Evidence ladder</a>
+        </nav>
+        <small>Public evidence only. No private data, credentials, security work, code execution, patch, or outcome guarantee.</small>
+      </div>
+    </footer>
+  </body>
+</html>
